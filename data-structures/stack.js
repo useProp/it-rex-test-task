@@ -1,23 +1,20 @@
 class Stack {
-	constructor() {
-		this.items = [];
-		this.id = 1;
-	}
+  constructor() {
+    this.items = [];
+  }
 
-	add(item) {
-		this.items.push({ id: this.id++, item });
-	}
+  add(item) {
+    this.items.push({ item });
+  }
 
-	remove() {
-		if (this.items.length === 0) return null;
-		this.id >= 0 && this.id--;
-		return this.items.pop();
-	}
+  remove() {
+    if (this.items.length === 0) return null;
+    return this.items.pop();
+  }
 
-	clear() {
-		this.items = [];
-		this.id = 1;
-	}
+  clear() {
+    this.items = [];
+  }
 }
 
 export const stack = new Stack();
